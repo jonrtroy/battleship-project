@@ -1,7 +1,7 @@
 body {
   height: 100%;
   width: 100%;
-  background: url(https://hbr.org/resources/images/article_assets/2004/10/SEPT15_03_535621603.jpg) no-repeat center center fixed;
+  background: url(https://hbr.org/resources/images/article_assets/2004/10/SEPT15_03_535621603.jpg) no-repeat center center scroll;
   background-size: cover;
 }
 
@@ -11,28 +11,18 @@ h1 {
   font-weight: bolder;
 }
 
-#shootInput {
+#missileCount {
   text-align: center;
-  padding-bottom: 40px;
+  font-size: 30px;
+  color: #FF1600;
+  font-weight: bolder;
+  padding: 0;
+  background-color: #000;
 }
 
-input {
-  border: solid 1px #0093FF;
-  border-radius: 5px;
-  box-shadow: 0 6px 0 #0093FF;
-  width: 200px;
-  height: 20px;
-  text-align: center;
-  font-size: 20px;
-}
-
-#shootButton {
-  font-size: 20px;
-  background-color: #FF0D00;
-  border: solid 3px #0093FF;
-  border-radius: 5px;
-  color: #FFF;
-  box-shadow: 0 3px 0 #0093FF;
+.container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rowOne {
@@ -53,12 +43,11 @@ input {
   border:#000 1px solid;
   width: 60%;
   height: 75px;
-/*  background-color: red;
-*/margin-right: auto;
+  margin-right: auto;
   margin-left: auto;
 }
 
-#emptyBox {
+#columnOne {
   font-size: 60px;
   color: #000;
   font-weight: bolder;
@@ -69,6 +58,22 @@ input {
   border:#000 1px solid;
   width: 20%;
   height: 75px;
+}
+
+.shipLocation {
+  border:#000 1px solid;
+  width: 20%;
+  height: 75px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.hit {
+  background-color: #FF1600;
+}
+
+.miss {
+  background-color: blue;
 }
 
 
