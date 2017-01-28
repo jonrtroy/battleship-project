@@ -2,32 +2,33 @@
 
 $(document).ready(function(){
 
-var shipOne = ['aOne', 'bOne', 'cOne'];
-var shipTwo = ['aTwo', 'bTwo', 'cTwo'];
-var shipThree = ['aThree', 'aFour', 'aFive'];
-var shipFour = ['bThree', 'bFour', 'bFive'];
-var shipFive = ['dOne', 'dTwo', 'dThree'];
-var shipSix = ['eOne', 'eTwo', 'eThree'];
-var shipSeven = ['cFour', 'dFour', 'eFour'];
-var shipEight = ['cFive', 'dFive', 'eFive'];
+  var shipOne = ['aOne', 'bOne', 'cOne'];
+  var shipTwo = ['aTwo', 'bTwo', 'cTwo'];
+  var shipThree = ['aThree', 'aFour', 'aFive'];
+  var shipFour = ['bThree', 'bFour', 'bFive'];
+  var shipFive = ['dOne', 'dTwo', 'dThree'];
+  var shipSix = ['eOne', 'eTwo', 'eThree'];
+  var shipSeven = ['cFour', 'dFour', 'eFour'];
+  var shipEight = ['cFive', 'dFive', 'eFive'];
 
-var missileCount = 15;
+  var missileCount = 15;
 
-var availableShips = [
-shipOne, shipTwo, shipThree, shipFour,
-shipFive, shipSix, shipSeven, shipEight
-];
+  var availableShips = [
+  shipOne, shipTwo, shipThree, shipFour,
+  shipFive, shipSix, shipSeven, shipEight
+  ];
 
-var allShips = [];
+  var allShips = [];
 
-var randomShip = function() {
-  for (var i = 0; i < 3; i++) {
-    var findShip = Math.floor(Math.random() * (7 - 0) + 0);
-    allShips.push(availableShips.splice(findShip, 1));
-    }
-}
+  var randomShip = function() {
+    for (var i = 0; i < 3; i++) {
+      var findShip = Math.floor(Math.random() * (7 - 0) + 0);
+      allShips.push(availableShips.splice(findShip, 1));
+      }
+  }
 
-randomShip();
+  randomShip();
+
 
   $('.shipLocation').on('click', function(){
     for (var i = 0; i < 3; i++) {
@@ -43,11 +44,19 @@ randomShip();
         break;
       } else {
         $(this).addClass('miss');
+        $(this).off('click');
         console.log('MISS');
       }
     }
     missileCount--;
+    var missilesFired = $('#missiles').text(`${parseInt($('#missiles').text())-1}`);
+    if (missileCount === 0) {
+       alert('Game Over! Try Again');
+       $('.board').remove();
+       $('.replay').css('display', 'inline');
+    }
     sunkShip();
+    winGame();
   });
 
   var sunkShip = function() {
@@ -59,12 +68,11 @@ randomShip();
       }
     }
   }
-  var missilesFired = $('#missiles').text(`${parseInt($('#missiles').text())-1}`);
-    if (missilesFired[0].textContent === 0) {
-       alert('Game Over! Try Again');
+  var winGame = function() {
+    if (allShips[0][0][0] === 'sunk' && allShips[1][0][0] === 'sunk' && allShips[2][0][0] === 'sunk') {
+      alert('You won Battleship!');
+      $('.board').remove();
+      $('.replay').css('display', 'inline');
     }
+  }
 });
-
-
-
-// });
