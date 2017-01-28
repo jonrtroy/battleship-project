@@ -81,4 +81,7 @@ $(document).ready(function(){
       $('.replayButton').css('display', 'inline');
     }
   }
+  $('.replayButton').on('click', function(){
+    location.reload();
+  })
 });
