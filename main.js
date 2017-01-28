@@ -2,67 +2,69 @@
 
 $(document).ready(function(){
 
-var board = 5;
-var shipNumbers = 3;
-var shipLength = 3;
-var sunkIndex = 0;
+var shipOne = ['aOne', 'bOne', 'cOne'];
+var shipTwo = ['aTwo', 'bTwo', 'cTwo'];
+var shipThree = ['aThree', 'aFour', 'aFive'];
+var shipFour = ['bThree', 'bFour', 'bFive'];
+var shipFive = ['dOne', 'dTwo', 'dThree'];
+var shipSix = ['eOne', 'eTwo', 'eThree'];
+var shipSeven = ['cFour', 'dFour', 'eFour'];
+var shipEight = ['cFive', 'dFive', 'eFive'];
+
 var missileCount = 15;
-var ships =
-    [0, 0, 0];
-     // hits: ["", "", ""] },
-    // { shipLocation: [0, 0, 0], hits: ["", "", ""] },
-    // { shipLocation: [0, 0, 0], hits: ["", "", ""] }
-var aOne = $('#aOne');
-var aTwo = $('#aTwo');
-var aThree = $('#aThree');
-var aFour = $('#aFour');
-var aFive = $('#aFive');
-var bOne = $('#bOne');
-var bTwo = $('#bTwo');
-var bThree = $('#bThree');
-var bFour = $('#bFour');
-var bFive = $('#bFive');
-var cOne = $('#cOne');
-var cTwo = $('#cTwo');
-var cThree = $('#cThree');
-var cFour = $('#cFour');
-var cFive = $('#cFive');
-var dOne = $('dOne');
-var dTwo = $('dTwo');
-var dThree = $('dThree');
-var dFour = $('dFour');
-var dFive = $('dFive');
-var eOne  = $('#eOne');
-var eTwo  = $('#eTwo');
-var eThree  = $('#eThree');
-var eFour = $('#eFour');
-var eFive  = $('#eFive');
 
+var availableShips = [
+shipOne, shipTwo, shipThree, shipFour,
+shipFive, shipSix, shipSeven, shipEight
+];
 
-var boardLocations = [
-aOne, aTwo, aThree, aFour, aFive,
-bOne, bTwo, bThree, bFour, bFive,
-cOne, cTwo, cThree, cFour, cFive,
-dOne, dTwo, dThree, dFour, dFive,
-eOne, eTwo, eThree, eFour, eFive
-]
+var allShips = [];
 
-$('.shipLocation').on('click', function(){
-  // if ($(this).attr('class') === boardLocations[sunkIndex]) {
-  $(this).addClass('hit');
-    var missilesFired = $('#missiles').text(`${parseInt($('#missiles').text())-1}`);
-      if ($(missilesFired === 0)) {
-        alert('Game Over! Try Again');
-  }
-
-});
-
-createShipLocation: function() {
-  // var shipLocation = $('shipLocation'[i]);
-  for (var i = 0; i < this.boardLocations; i++) {
-    var hitLocations = Math.floor(Math.random())
-  }
+var randomShip = function() {
+  for (var i = 0; i < 3; i++) {
+    var findShip = Math.floor(Math.random() * (7 - 0) + 0);
+    allShips.push(availableShips.splice(findShip, 1));
+    }
 }
 
+randomShip();
 
+  $('.shipLocation').on('click', function(){
+    for (var i = 0; i < 3; i++) {
+      console.log('SHIP', allShips[i][0]);
+      var found = allShips[i][0].indexOf(this.id);
+      if (found > -1) {
+        console.log('FOUND INDEX', found);
+        $(this).removeClass('miss');
+        $(this).addClass('hit');
+        $(this).off('click');
+        allShips[i][0].splice(found, 1);
+        console.log('THIS', this);
+        break;
+      } else {
+        $(this).addClass('miss');
+        console.log('MISS');
+      }
+    }
+    missileCount--;
+    sunkShip();
+  });
+
+  var sunkShip = function() {
+    console.log(allShips);
+    for (var i = 0; i < 3; i++) {
+      if (allShips[i][0].length === 0)  {
+        alert('You sunk my Battleship!');
+        allShips[i][0].push('sunk');
+      }
+    }
+  }
+  var missilesFired = $('#missiles').text(`${parseInt($('#missiles').text())-1}`);
+    if (missilesFired[0].textContent === 0) {
+       alert('Game Over! Try Again');
+    }
 });
+
+
+
+// });
