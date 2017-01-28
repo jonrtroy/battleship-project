@@ -13,6 +13,8 @@ $(document).ready(function(){
 
   var missileCount = 15;
 
+  var wonGame = false;
+
   var availableShips = [
   shipOne, shipTwo, shipThree, shipFour,
   shipFive, shipSix, shipSeven, shipEight
@@ -48,15 +50,18 @@ $(document).ready(function(){
         console.log('MISS');
       }
     }
+    sunkShip();
+
+    winGame();
+
     missileCount--;
+
     var missilesFired = $('#missiles').text(`${parseInt($('#missiles').text())-1}`);
-    if (missileCount === 0) {
+    if (missileCount === 0 && wonGame === false) {
        alert('Game Over! Try Again');
        $('.board').remove();
-       $('.replay').css('display', 'inline');
+       $('.replayButton').css('display', 'inline');
     }
-    sunkShip();
-    winGame();
   });
 
   var sunkShip = function() {
@@ -71,8 +76,9 @@ $(document).ready(function(){
   var winGame = function() {
     if (allShips[0][0][0] === 'sunk' && allShips[1][0][0] === 'sunk' && allShips[2][0][0] === 'sunk') {
       alert('You won Battleship!');
+      wonGame = true;
       $('.board').remove();
-      $('.replay').css('display', 'inline');
+      $('.replayButton').css('display', 'inline');
     }
   }
 });
