@@ -9,6 +9,21 @@ h1 {
   text-align: center;
   font-size: 50px;
   font-weight: bolder;
+  margin: auto;
+}
+
+.red {
+  color: #FF1600;
+  background-color: #000;
+  width: 15%;
+  text-align: center;
+}
+
+.blue {
+  color: #0059FF;
+  background-color: #000;
+  width: 15%;
+  text-align: center;
 }
 
 #missileCount {
@@ -16,7 +31,6 @@ h1 {
   font-size: 30px;
   color: #FF1600;
   font-weight: bolder;
-  padding: 0;
   background-color: #000;
 }
 
@@ -76,10 +90,16 @@ h1 {
   background-color: #0059FF;
 }
 
+.buttonContainer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .replayButton {
   display: none;
-  width: 100%;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: bolder;
   font-size: 60px;
   color: #BDFFFA;
