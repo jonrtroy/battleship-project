@@ -1,11 +1,7 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: The Game
-
-### Necessary Deliverables
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)Project #1: Battleship the Game
 
 ### Technologies Used
-  - HTML & CSS
-  - jQuery for DOM manipulation
-  - Javascript logic
+  - HTML, CSS, jQuery
 
 ### Approach taken
 I wanted to pseudocode most of my project. I first said down and drew the wireframe on how I wanted the game to look. I felt that this was the best approach since if I had something to look at, I would know what functionalities I wanted. After I drew the game out on a piece of paper, I started to write the HTML and CSS for it. I definitely should have wrote down every single functionality that I wanted for the game though. I spent all of Thursday writing code that I ended up not using. I had an idea in my head of what I wanted, but when it came time to write it all in sublime text, I ended up in a worst spot. I had the look of it right, but not the functionality.
@@ -20,7 +16,8 @@ As a user I should be able to see if I have sunken all of my opponent's ships an
 As a user I should be able to see if I have lost the game.
 
 ### Wireframes
-Uploaded it as a jpg file on GitHub
+![Alt Text] code/wdi/projects/project-1/IMG_3081.JPG
+<!-- Uploaded it as a jpg file on GitHub -->
 
 ### How-to-use instructions
   - The goal of the game is to find your opponent's 3 ships before the count turns to 0. 
