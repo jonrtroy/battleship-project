@@ -7,13 +7,13 @@
 I wanted to pseudocode most of my project. I first said down and drew the wireframe on how I wanted the game to look. I felt that this was the best approach since if I had something to look at, I would know what functionalities I wanted. After I drew the game out on a piece of paper, I started to write the HTML and CSS for it. I definitely should have wrote down every single functionality that I wanted for the game though. I spent all of Thursday writing code that I ended up not using. I had an idea in my head of what I wanted, but when it came time to write it all in sublime text, I ended up in a worst spot. I had the look of it right, but not the functionality.
   
 ### User stories
-As a user I should be able to identify that I am playing a Battleship game where only I am the one on offense and trying to find my opponents' ships.
-As a user I should be able to see what color is for hit and what color is for miss.
-As a user I should be able to see how many missiles I have left to know how many turns I have left.
-As a user I should be able to click on any of the boxes to see if that is where my opponent has put their ship. 
-As a user I should be able to see if I have sunken my opponent's ship with an alert.
-As a user I should be able to see if I have sunken all of my opponent's ships and if I have won the game.
-As a user I should be able to see if I have lost the game.
+  - As a user I should be able to identify that I am playing a Battleship game where only I am the one on offense and trying to find my opponents' ships.
+  - As a user I should be able to see what color is for hit and what color is for miss.
+  - As a user I should be able to see how many missiles I have left to know how many turns I have left.
+  - As a user I should be able to click on any of the boxes to see if that is where my opponent has put their ship. 
+  - As a user I should be able to see if I have sunken my opponent's ship with an alert.
+  - As a user I should be able to see if I have sunken all of my opponent's ships and if I have won the game.
+  - As a user I should be able to see if I have lost the game.
 
 ### Wireframes
 Uploaded it as a jpg file on GitHub
