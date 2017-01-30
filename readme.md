@@ -2,8 +2,10 @@
 
 ### Necessary Deliverables
 
-### Explanations of the technologies used
-I used Google a lot during this project to look up some things that I wanted to do, but either coouldn't remember how to do it or a new way in doing something. There were a lot of times where I just had to reread old notes, homework, exercises and labs to figure out how to write the code that I wanted. Over the past week, I was trying to get comfortable with using the console on the browser. This helped me tremendously throughout the whole process. I could run a function through my JS, but would use the console to see if it was running properly. It would help me identify the problem, whether it was syntax related or an improper function. It also help me format with HTML and CSS a lot better. I would say that using the console in the browser was the most important technology that I used for this project.
+### Technologies Used
+  - HTML & CSS
+  - jQuery for DOM manipulation
+  - Javascript logic
 
 ### Approach taken
 I wanted to pseudocode most of my project. I first said down and drew the wireframe on how I wanted the game to look. I felt that this was the best approach since if I had something to look at, I would know what functionalities I wanted. After I drew the game out on a piece of paper, I started to write the HTML and CSS for it. I definitely should have wrote down every single functionality that I wanted for the game though. I spent all of Thursday writing code that I ended up not using. I had an idea in my head of what I wanted, but when it came time to write it all in sublime text, I ended up in a worst spot. I had the look of it right, but not the functionality.
@@ -18,7 +20,7 @@ As a user I should be able to see if I have sunken all of my opponent's ships an
 As a user I should be able to see if I have lost the game.
 
 ### Wireframes
-Uploaded it on GitHub
+Uploaded it as a jpg file on GitHub
 
 ### How-to-use instructions
   - The goal of the game is to find your opponent's 3 ships before the count turns to 0. 
