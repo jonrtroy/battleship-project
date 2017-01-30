@@ -93,6 +93,7 @@ $(document).ready(function(){
     }
   }
   // used this function so that the user could replay the game
+  // location.reload() will refresh the page
   $('.replayButton').on('click', function(){
     location.reload();
   })
