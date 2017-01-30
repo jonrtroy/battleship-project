@@ -16,8 +16,7 @@ As a user I should be able to see if I have sunken all of my opponent's ships an
 As a user I should be able to see if I have lost the game.
 
 ### Wireframes
-![Alt Text] /Users/Jon/code/wdi/projects/project-1/IMG_3081.JPG
-<!-- Uploaded it as a jpg file on GitHub -->
+Uploaded it as a jpg file on GitHub
 
 ### How-to-use instructions
   - The goal of the game is to find your opponent's 3 ships before the count turns to 0. 
